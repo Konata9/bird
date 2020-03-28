@@ -1,0 +1,80 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "lib": [
+      "ES2015",
+      "dom"
+    ],
+    "paths": {
+      "@config/*": [
+        "./config/*"
+      ],
+      "@config": [
+        "./config/index"
+      ],
+      "@locale/*": [
+        "./locale/*"
+      ],
+      "@public/*": [
+        "./public/*"
+      ],
+      "@src/*": [
+        "./src/*"
+      ],
+      "@src": [
+        "./src/index"
+      ],
+      "@constants/*": [
+        "./src/constants/*"
+      ],
+      "@constants": [
+        "./src/constants/index"
+      ],
+      "@interface/*": [
+        "./src/interface/*"
+      ],
+      "@interface": [
+        "./src/interface/index"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@store/*": [
+        "./src/store/*"
+      ],
+      "@store": [
+        "./src/store/index"
+      ],
+      "@service/*": [
+        "./src/service/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@utils": [
+        "./src/utils/index"
+      ]
+    },
+    "target": "es5",
+    "jsx": "react",
+    "types": [
+      "react",
+      "node"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "pretty": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+  },
+  "include": [
+    "./config/**/*",
+    "./locale/**/*",
+    "./src/**/*"
+  ]
+}
