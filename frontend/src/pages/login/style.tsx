@@ -11,6 +11,7 @@ export const PageLayout = styled.div`
 
 export const LeftPannel = styled.div`
   width: 50%;
+  min-width: 50%;
   background: ${bgDark};
   color: ${fontLight};
   display: flex;

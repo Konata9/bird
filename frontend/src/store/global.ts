@@ -15,12 +15,12 @@ export class GlobalStore {
 
 const global = new GlobalStore()
 
-export function watchLoading(): any {
+export function watchLoading(): Function {
   return function (
     target: any,
     propertyKey: string,
     descriptor: PropertyDescriptor,
-  ): any {
+  ): PropertyDescriptor {
     let response: any = null
     const tragetValue = descriptor.value
     descriptor.value = async function (...args: any[]) {
@@ -28,6 +28,7 @@ export function watchLoading(): any {
       try {
         response = await tragetValue.apply(this, args)
       } catch (error) {
+        // TODO better error handler send to server or write into logs
         console.log(error)
       }
       global.switchLoadingStatus(propertyKey, false)

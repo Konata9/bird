@@ -23,7 +23,6 @@ const routes: Array<IRouter> = [
     routes: [
       { path: '/', redirect: '/dashboard', exact: true },
       { path: '/dashboard', component: Dashboard },
-      { path: '/system', redirect: '/system/user', exact: true },
     ]
   },
 ]
