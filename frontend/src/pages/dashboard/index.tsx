@@ -4,7 +4,7 @@ import { Card } from 'antd'
 const Dashboard = () => {
 
   return (
-    <Card>
+    <Card bordered={false}>
       <div>
         This project is a React + Express + MongoDB with Graphql boilerplate, help developing the system like CMS quickly. Based on Typescript.
       </div>

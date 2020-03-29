@@ -1,15 +1,24 @@
 import React from 'react'
 import { inject, observer } from 'mobx-react'
 import { Menu } from 'antd'
+import { FileTextOutlined } from '@ant-design/icons'
 import { RouterLink } from '@src/pages/style/layout'
 import { fontLight } from '@src/pages/style/color'
 import { formatMessage } from '@utils'
 
 import { Nav, MenuWrapper, Logo } from './style'
+import ActionBar from './actionbar'
 
-const ActionBar = inject()(
+const MenuBar = inject()(
   observer(() => {
-    return <div>action</div>
+    return (
+      <Menu theme="dark" mode="horizontal">
+        <Menu.Item key="project">
+          <FileTextOutlined />
+          Project
+        </Menu.Item>
+      </Menu>
+    )
   })
 )
 
@@ -22,11 +31,7 @@ const NavBar = () => {
             {formatMessage('system.logo')}
           </RouterLink>
         </Logo>
-        <Menu theme="dark" mode="horizontal">
-          <Menu.Item key="project">
-            Project
-        </Menu.Item>
-        </Menu>
+        <MenuBar />
       </MenuWrapper>
       <ActionBar />
     </Nav>

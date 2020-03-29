@@ -1,10 +1,10 @@
 export const fontLight = '#ffffff'
-export const fontBlue = '#3498db'
+export const fontBlue = '#1e90ff'
 export const fontGray = '#95a5a6'
 export const fontDark = '#2c3e50'
 export const fontDarkLight = '#34495e'
 
-export const bgLight = '#ecf0f1'
+export const bgLight = '#f1f2f6'
 export const bgDark = '#001529'
 export const bgWhite = '#ffffff'
 export const bgBlue = '#2980b9'

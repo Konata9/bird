@@ -19,14 +19,10 @@ export const StyledLayout = styled.div`
 `
 
 export const RouterLink = styled(Link)`
-  color: ${
-  ({ color = fontDark }: IRouterLink) => color
-  };
+  color: ${({ color = fontDark }: IRouterLink) => color};
 
   &:hover{
-    color: ${
-  ({ color = fontDark }: IRouterLink) => color
-  };
+    color: ${({ color = fontDark }: IRouterLink) => color};
   }
 `
 

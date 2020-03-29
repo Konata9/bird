@@ -53,7 +53,7 @@ export const Header = styled.div`
 `
 
 export const Nav = styled.div`
-  width: 1200px;
+  width: ${contentWidth};
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -69,11 +69,19 @@ export const Logo = styled.div`
   margin-right: 20px;
 `
 
+export const ActionWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 export const Container = styled.div`
-  flex: 1;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 `
 
 export const ContentWrapper = styled.div`
   width: ${contentWidth};
-  color: ${ fontDark};
+  color: ${fontDark};
 `
