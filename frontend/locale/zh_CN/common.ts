@@ -1,6 +1,8 @@
 export default {
   system: {
-    logo: 'Faiz Admin System',
+    logo: 'Bird',
+    agenda: '支持多人协作的开源翻译资源管理平台',
+    sourceCode: '查看源码',
     loading: '系统加载中...',
     login: '登录',
     logout: '登出'

@@ -1,86 +1,65 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Card, Form, Input, Button } from 'antd'
+import { GithubOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
 
-import styled from 'styled-components'
-import { StyledLayout } from '../style/layout'
-import { fontDark } from '../style/color'
-
 import { formatMessage } from '@utils'
-import { RESPONSE_STATUS } from '@constants'
+import { PageLayout, LeftPannel, Agenda, TagWrapper, RightPannel, FormLayout, StyledLabel } from './style'
 
-import { IStore } from '@store'
-import { UserStore } from '@store/user'
-import { IAccount } from '@interface/user'
+const LoginForm = inject()(
+  observer(
+    () => {
+      const [form] = Form.useForm()
 
-const CardWrapper = styled.div`
-  width: 600px;
-  margin: 0 auto;
-  margin-top: 15vh;
-`
-
-const CardTitle = styled.div`
-  color: ${fontDark};
-  font-size: 2rem;
-  text-align: center;
-`
-
-const LoginForm = ({ userStore }: IStore) => {
-
-  const [form] = Form.useForm()
-  const { validateFields } = form
-  const history = useHistory()
-  const { login } = userStore
-
-  const doUserLogin = async () => {
-    const values = await validateFields().catch(error => console.log(error))
-
-    const { username, password } = values as IAccount
-    const { status } = await login({ username, password })
-    if (status === RESPONSE_STATUS.SUCCESS) {
-      history.push('/')
-    }
-  }
-
-
-  useEffect(() => {
-    localStorage.clear()
-  }, [])
-
-  return (
-    <StyledLayout>
-      <CardWrapper>
-        <Card title={
-          <CardTitle>{formatMessage('system.logo')}</CardTitle>
-        }>
-          <Form hideRequiredMark form={form}>
-            <Form.Item name="username" rules={[
-              { required: true, message: formatMessage('validate.usernameIsNull') }
-            ]}>
+      return (
+        <FormLayout>
+          <Form form={form} layout="vertical">
+            <Form.Item label={
+              <StyledLabel>
+                {formatMessage('username')}
+              </StyledLabel>}
+              name="username">
               <Input size="large" placeholder={formatMessage('placeholder.username')} />
             </Form.Item>
-            <Form.Item name="password" rules={[
-              { required: true, message: formatMessage('validate.passwordIsNull') }
-            ]}>
-              <Input size="large" type="password" placeholder={formatMessage('placeholder.password')} />
+            <Form.Item label={
+              <StyledLabel>
+                {formatMessage('password')}
+              </StyledLabel>}
+              name="password">
+              <Input size="large" placeholder={formatMessage('placeholder.password')} />
             </Form.Item>
             <Form.Item>
-              <Button type="primary" size="large" block onClick={doUserLogin}>{formatMessage('system.login')}</Button>
+              <Button size="large" type="primary" block>
+                {formatMessage('system.login')}
+              </Button>
             </Form.Item>
           </Form>
-        </Card>
-      </CardWrapper>
-    </StyledLayout>
+        </FormLayout>
+      )
+    }
+  )
+)
+
+const Login = () => {
+  return (
+    <PageLayout>
+      <LeftPannel>
+        <Agenda>
+          <h1>{formatMessage('system.logo')}</h1>
+          <p>{formatMessage('system.agenda')}</p>
+          <TagWrapper>
+            <Button icon={<GithubOutlined />}>
+              {formatMessage('system.sourceCode')}
+            </Button>
+          </TagWrapper>
+        </Agenda>
+      </LeftPannel>
+      <RightPannel>
+        <LoginForm />
+      </RightPannel>
+    </PageLayout>
   )
 }
-
-const Login = inject((stores: IStore) => {
-  return {
-    userStore: stores.userStore
-  }
-})(
-  observer(LoginForm)
-)
 
 export default Login

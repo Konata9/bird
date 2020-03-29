@@ -45,7 +45,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Faiz Admin',
+      title: 'Bird Platform',
       template: path.resolve(__dirname, '../index.html'),
       inject: true
     }),
