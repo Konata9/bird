@@ -1,47 +1,8 @@
 import styled from 'styled-components'
-import { Link, LinkProps } from 'react-router-dom'
-import { bgDark, bgWhite, fontDark, fontBlue, fontGray, borderLight, fontLight } from '@src/pages/style/color'
+import { Input } from 'antd'
+import { bgDark, fontDark, fontLight } from '@src/pages/style/color'
 
-interface IBreadLink extends LinkProps {
-  current: any
-}
-
-const headerHeight = '64px'
 const contentWidth = '1200px'
-
-export const HeaderWrapper = styled.div`
-  width: 100%;
-  height: ${headerHeight};
-  line-height: ${headerHeight};
-  padding: 0 20px;
-  color: ${fontDark};
-  background: ${bgWhite};
-  border-bottom: 1px solid ${borderLight};
-  display: flex;
-  justify-content: flex-end;
-`
-
-export const UserInfoWrapper = styled.div`
-  min-width: 100px;
-  height: ${headerHeight};
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`
-
-export const UserNameWrapper = styled.div`
-  margin-left: 10px;
-`
-
-export const BreadLink = styled(Link)`
-  color: ${
-  ({ current = 0 }: IBreadLink) => current ? fontBlue : fontGray
-  }
-`
-
-export const BreadSpliter = styled.span`
-  padding: 0 10px;
-`
 
 export const Header = styled.div`
   width: 100%;
@@ -66,12 +27,44 @@ export const MenuWrapper = styled.div`
 `
 
 export const Logo = styled.div`
-  margin-right: 20px;
+  margin-right: 10px;
 `
 
 export const ActionWrapper = styled.div`
   display: flex;
   align-items: center;
+`
+
+export const SearchWrapper = styled.div`
+  margin-right: 10px;
+`
+
+export const SearchBar = styled(Input.Search)`
+  margin-right: 10px;
+  transition: all .5s ease .5s;
+
+  input {
+    width: 150px;
+    transition: all .5s ease .5s;
+    &:focus{
+      width: 250px;
+    }
+  }
+`
+
+export const NoticeWrapper = styled.div`
+  margin-right: 10px;
+  fontSize: 24px;
+
+  &:hover{
+    cursor: pointer;
+  }
+`
+
+export const AvatarWrapper = styled.div`
+  &:hover{
+    cursor: pointer;
+  }
 `
 
 export const Container = styled.div`
