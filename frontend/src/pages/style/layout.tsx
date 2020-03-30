@@ -16,6 +16,7 @@ export const StyledLayout = styled.div`
   overflow: hidden;
   color: ${fontLight};
   background: ${bgLight};
+  box-sizing: border-box;
 `
 
 export const RouterLink = styled(Link)`

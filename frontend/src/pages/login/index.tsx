@@ -1,8 +1,8 @@
 import React from 'react'
-import { Card, Form, Input, Button } from 'antd'
-import { GithubOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
+import { Card, Form, Input, Button } from 'antd'
+import { GithubOutlined } from '@ant-design/icons'
 
 import { formatMessage } from '@utils'
 import { PageLayout, LeftPannel, Agenda, TagWrapper, RightPannel, FormLayout, StyledLabel } from './style'

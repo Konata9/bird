@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Input } from 'antd'
 import { bgDark, fontDark, fontLight } from '@src/pages/style/color'
 
-const contentWidth = '1200px'
+const contentWidth = '1300px'
 
 export const Header = styled.div`
   width: 100%;

@@ -1,6 +1,6 @@
 import Login from '@src/pages/login'
 import Layout from '@src/pages/layout'
-import Dashboard from '@src/pages/dashboard'
+import Profile from '@src/pages/profile'
 
 export interface IRouter {
   path: string
@@ -21,8 +21,8 @@ const routes: Array<IRouter> = [
     path: '/',
     component: Layout,
     routes: [
-      { path: '/', redirect: '/dashboard', exact: true },
-      { path: '/dashboard', component: Dashboard },
+      { path: '/', redirect: '/profile', exact: true },
+      { path: '/profile', component: Profile },
     ]
   },
 ]
