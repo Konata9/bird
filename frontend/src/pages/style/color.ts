@@ -8,9 +8,10 @@ export const bgLight = '#f1f2f6'
 export const bgDark = '#001529'
 export const bgWhite = '#ffffff'
 export const bgBlue = '#2980b9'
+export const bgGray = '#f1f2f6'
 
 export const borderLight = bgLight
-export const borderGray = '#bdc3c7'
+export const borderGray = '#dfe4ea'
 
 export const flatGreenLight = '#e74c3c'
 export const flatYellowLight = '#f1c40f'

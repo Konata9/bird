@@ -5,9 +5,11 @@ export default {
     sourceCode: '查看源码',
     loading: '系统加载中...',
     login: '登录',
-    logout: '登出'
+    logout: '登出',
+    createTime: '创建时间',
+    updateTime: '更新时间',
   },
-  button: {
+  action: {
     confirm: '确认',
     cancel: '取消',
     submit: '提交',
@@ -20,11 +22,4 @@ export default {
     search: '搜索',
     detail: '详情',
   },
-  table: {
-    action: '操作'
-  },
-  time: {
-    createTime: '创建时间',
-    updateTime: '更新时间'
-  }
 }

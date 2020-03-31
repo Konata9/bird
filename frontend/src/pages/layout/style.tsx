@@ -41,11 +41,11 @@ export const SearchWrapper = styled.div`
 
 export const SearchBar = styled(Input.Search)`
   margin-right: 10px;
-  transition: all .5s ease .5s;
+  transition: all .5s ease .1s;
 
   input {
     width: 150px;
-    transition: all .5s ease .5s;
+    transition: all .5s ease .1s;
     &:focus{
       width: 250px;
     }

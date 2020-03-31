@@ -17,14 +17,14 @@ const LoginForm = inject()(
           <Form form={form} layout="vertical">
             <Form.Item label={
               <StyledLabel>
-                {formatMessage('username')}
+                {formatMessage('user.username')}
               </StyledLabel>}
               name="username">
               <Input size="large" placeholder={formatMessage('placeholder.username')} />
             </Form.Item>
             <Form.Item label={
               <StyledLabel>
-                {formatMessage('password')}
+                {formatMessage('user.password')}
               </StyledLabel>}
               name="password">
               <Input size="large" placeholder={formatMessage('placeholder.password')} />
