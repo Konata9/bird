@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { bgLight, fontLight, fontDark, fontBlue } from './color'
+import { bgWhite, fontLight, fontDark, fontBlue } from './color'
 import { Link, LinkProps } from 'react-router-dom'
 
 interface IRouterLink extends LinkProps {
@@ -15,7 +15,7 @@ export const StyledLayout = styled.div`
   height: 100vh;
   overflow: hidden;
   color: ${fontLight};
-  background: ${bgLight};
+  background: ${bgWhite};
   box-sizing: border-box;
 `
 
