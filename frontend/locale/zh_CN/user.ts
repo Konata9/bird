@@ -8,5 +8,6 @@ export default {
     profile: '用户资料',
     updateProfile: '更新资料',
     setting: '用户设置',
+    introduce: '用户简介'
   },
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { inject, observer } from 'mobx-react'
 import { Menu, Dropdown, Avatar } from 'antd'
-import { BellOutlined, UserOutlined, LogoutOutlined } from '@ant-design/icons'
+import { BellOutlined, UserOutlined, LogoutOutlined, PlusOutlined } from '@ant-design/icons'
 import { formatMessage } from '@utils'
 
 import { ActionWrapper, SearchBar, NoticeWrapper, AvatarWrapper } from './style'
@@ -30,6 +30,31 @@ const NoticeBlock = inject()(
         <NoticeWrapper>
           <Dropdown overlay={menu} trigger={['click']} placement="bottomRight">
             <BellOutlined style={{ fontSize: '18px' }} />
+          </Dropdown>
+        </NoticeWrapper>
+      )
+    }
+  )
+)
+
+const CreateBlock = inject()(
+  observer(
+    () => {
+      const menu = (
+        <Menu>
+          <Menu.Item>
+            1234
+          </Menu.Item>
+          <Menu.Item>
+            1234
+          </Menu.Item>
+        </Menu>
+      )
+
+      return (
+        <NoticeWrapper>
+          <Dropdown overlay={menu} trigger={['click']} placement="bottomRight">
+            <PlusOutlined style={{ fontSize: '18px' }} />
           </Dropdown>
         </NoticeWrapper>
       )
@@ -71,6 +96,7 @@ const ActionBar = () => {
     <ActionWrapper>
       <SearchBlock />
       <NoticeBlock />
+      <CreateBlock />
       <AvatarBlock />
     </ActionWrapper>
   )

@@ -10,7 +10,7 @@ const AccountBlock = inject()(
   observer(() => {
     return (
       <AccountWrapper>
-        <AvatarImage src="https://lh3.googleusercontent.com/proxy/fSjBkoxV8BhXXR8AZQlsR6vCy6rMXpbDjwTz0_DutHjcOkstAm_COGXQ03TCRhysUDzjUzk2XwIohZ4DY4g1_ftkv3NQ-b2vxxF_" />
+        <AvatarImage src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3933841076,3931571133&fm=26&gp=0.jpg" />
         <UserName>
           User name
         </UserName>

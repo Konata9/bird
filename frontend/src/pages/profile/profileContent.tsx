@@ -12,8 +12,17 @@ const ProjectList = () => {
         <List.Item actions={[<a>edit</a>, <a>action</a>]}>
           <List.Item.Meta title="project name" />
         </List.Item>
+        <List.Item actions={[<a>edit</a>, <a>action</a>]}>
+          <List.Item.Meta title="project name" />
+        </List.Item>
+        <List.Item actions={[<a>edit</a>, <a>action</a>]}>
+          <List.Item.Meta title="project name" />
+        </List.Item>
+        <List.Item actions={[<a>edit</a>, <a>action</a>]}>
+          <List.Item.Meta title="project name" />
+        </List.Item>
       </List>
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
         <Pagination total={20} simple />
       </div>
     </>
