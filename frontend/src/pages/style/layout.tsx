@@ -35,3 +35,11 @@ export const ActionLink = styled.a`
     text - decoration: none;
   }
 `
+
+export const PageTitle = styled.h1`
+  color: ${fontDark};
+`
+
+export const ContentTitle = styled.h2`
+  color: ${fontDark};
+`
