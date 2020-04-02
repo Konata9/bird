@@ -10,7 +10,7 @@ export const ContentTitle = styled.h2`
 `
 
 export const AccountWrapper = styled.div`
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 `
 

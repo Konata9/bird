@@ -13,7 +13,6 @@ interface ICommonLink {
 export const StyledLayout = styled.div`
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   color: ${fontLight};
   background: ${bgWhite};
   box-sizing: border-box;

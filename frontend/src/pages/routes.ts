@@ -2,6 +2,7 @@ import Login from '@src/pages/login'
 import Layout from '@src/pages/layout'
 import Profile from '@src/pages/profile'
 import Project from '@src/pages/project'
+import ProjectCreate from '@src/pages/project/projectCreate'
 import Account from '@src/pages/account'
 
 export interface IRouter {
@@ -26,6 +27,7 @@ const routes: Array<IRouter> = [
       { path: '/', redirect: '/profile', exact: true },
       { path: '/profile', component: Profile },
       { path: '/project', component: Project },
+      { path: '/projectCreate', component: ProjectCreate },
       { path: '/account', component: Account },
     ]
   },

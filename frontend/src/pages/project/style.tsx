@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { bgGray } from '@pages/style/color'
+import { bgGray, borderGray } from '@pages/style/color'
 
 import { Card } from 'antd'
 
@@ -36,6 +36,31 @@ export const MemberWrapper = styled.div`
 `
 
 export const SettingWrapper = styled.div`
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
+`
+
+export const CreateWrapper = styled.div`
+  width: 80%;
+  margin: 0 auto;
+`
+
+export const LanguageWrapper = styled.div`
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+`
+
+export const LanguageCheckBlock = styled.div`
+  width: 50%;
+  max-width: 50%;
+  padding: 10px;
+  border: 1px solid ${borderGray};
+`
+
+export const LanguageResultBlock = styled.div`
+  flex: 1;
+  padding: 10px;
+  background: ${bgGray};
 `
