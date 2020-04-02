@@ -21,3 +21,21 @@ export const InfoCard = styled(Card)`
 export const InfoWrapper = styled.div`
   flex: 1;
 `
+
+export const ToolBar = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const MemberWrapper = styled.div`
+  width: 100%;
+
+`
+
+export const SettingWrapper = styled.div`
+  width: 90%;
+  margin: 0 auto;
+`

@@ -5,31 +5,9 @@ import { Tabs, Table, Card } from 'antd'
 import { PageTitle, ContentTitle } from '@pages/style/layout'
 import { ProjectBlock, ProjectTable, InfoWrapper } from './style'
 
-const ProjectInfo = inject()(observer(
-  () => {
-    return (
-      <ProjectBlock>
-        <ProjectTable>
-          <Table />
-        </ProjectTable>
-        <InfoWrapper>
-          <Card title="Project Info">
-            111
-        </Card>
-        </InfoWrapper>
-      </ProjectBlock>
-    )
-  }
-))
-
-const ProjectSetting = inject()(observer(
-  () => {
-    return (
-      <>Setting</>
-    )
-  }
-))
-
+import ProjectInfo from './projectInfo'
+import ProjectMember from './projectMember'
+import ProjectSetting from './projectSetting'
 
 const Project = () => {
   return (
@@ -39,7 +17,10 @@ const Project = () => {
         <Tabs.TabPane key="1" tab="Project">
           <ProjectInfo />
         </Tabs.TabPane>
-        <Tabs.TabPane key="2" tab="Setting">
+        <Tabs.TabPane key="2" tab="Member">
+          <ProjectMember />
+        </Tabs.TabPane>
+        <Tabs.TabPane key="3" tab="Setting">
           <ProjectSetting />
         </Tabs.TabPane>
       </Tabs>
