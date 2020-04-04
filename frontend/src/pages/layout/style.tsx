@@ -3,9 +3,12 @@ import { Input } from 'antd'
 import { bgDark, fontDark, fontLight } from '@src/pages/style/color'
 
 const contentWidth = '1300px'
+const headerHeight = '66px'
+const footerHeight = '60px'
 
 export const Header = styled.div`
   width: 100%;
+  margin-bottom: 20px;
   background: ${bgDark};
   color: ${fontLight};
   display: flex;
@@ -69,8 +72,8 @@ export const AvatarWrapper = styled.div`
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
-  margin-top: 20px;
+  height: calc(100vh - ${headerHeight} - ${footerHeight});
+  overflow: hidden;
   display: flex;
   justify-content: center;
 `
@@ -78,5 +81,6 @@ export const Container = styled.div`
 export const ContentWrapper = styled.div`
   width: ${contentWidth};
   height: 100%;
+  overflow: auto;
   color: ${fontDark};
 `

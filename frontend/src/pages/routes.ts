@@ -3,6 +3,9 @@ import Layout from '@src/pages/layout'
 import Profile from '@src/pages/profile'
 import Project from '@src/pages/project'
 import ProjectCreate from '@src/pages/project/projectCreate'
+import TranslationPage from '@src/pages/translation'
+import FileList from '@src/pages/translation/FileList'
+import WorkSpace from '@src/pages/translation/workspace'
 import Account from '@src/pages/account'
 
 export interface IRouter {
@@ -28,6 +31,15 @@ const routes: Array<IRouter> = [
       { path: '/profile', component: Profile },
       { path: '/project', component: Project },
       { path: '/projectCreate', component: ProjectCreate },
+      {
+        path: '/translation',
+        component: TranslationPage,
+        routes: [
+          { path: '/translation', redirect: '/translation/fileList', exact: true },
+          { path: '/translation/fileList', component: FileList },
+          { path: '/translation/workspace', component: WorkSpace },
+        ]
+      },
       { path: '/account', component: Account },
     ]
   },

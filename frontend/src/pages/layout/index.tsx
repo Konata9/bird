@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
+import { Divider } from 'antd'
 import { StyledLayout } from '@src/pages/style/layout'
 import RenderRoutes from '@src/pages/renderRoutes'
 import { IRouter } from '@src/pages/routes'
