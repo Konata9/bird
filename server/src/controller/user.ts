@@ -3,7 +3,7 @@ export interface IAccount {
   id?: string
   username?: string
   password?: string
-  roles?: string[]
+  roles?: any[]
 }
 
 export async function checkUserExist(condition: IAccount) {
